@@ -1,0 +1,48 @@
+.headerGroup {
+    width: 100%;
+}
+.headerNav {
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+@media (min-width: 0px) {
+    .headerMyInfo {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .headerContainer {
+        max-width: 1280px;
+        height: 144px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .headerNav {
+        align-items: flex-end;
+    }
+    .headerImage {
+        width: 15rem;
+    }
+    .headerMyInfo {
+        display: flex;
+        -webkit-box-pack: end;
+        justify-content: flex-end;
+        flex-direction: row;
+    }
+    .myInfoLink {
+        margin-left: 0.75rem;
+    }
+    .verticalLine {
+        width: 1px;        /* 세로선의 두께 */
+        height: 100px;     /* 세로선의 길이 */
+        background-color: black;  /* 선의 색상 */
+        border: none;
+        block-size: 0.75rem;
+    }
+}
