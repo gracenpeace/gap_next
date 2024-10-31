@@ -22,27 +22,72 @@
         height: 144px;
         padding-left: 2rem;
         padding-right: 2rem;
+        margin: 0 auto;
     }
+
     .headerNav {
         align-items: flex-end;
+        padding: 0.3125rem 0.13475rem 0.5625rem 0px;
     }
+
+    .navRootBox {
+        flex-direction: row;
+        display: flex;
+        flex-shrink: 0;
+    }
+
+    .navRootBox2 {
+        flex-direction: column;
+        display: flex;
+    }
+
     .headerImage {
-        width: 15rem;
+        width: 12rem;
+        padding-top: 0.5rem;
     }
+
     .headerMyInfo {
         display: flex;
         -webkit-box-pack: end;
-        justify-content: flex-end;
+        justify-content: center;
         flex-direction: row;
+        position: relative;
     }
+
     .myInfoLink {
-        margin-left: 0.75rem;
+        /*margin-left: 0.75rem;*/
+        font-size: 0.875rem;
+        color: rgb(119, 119, 119);
+        white-space: nowrap;
     }
+
     .verticalLine {
-        width: 1px;        /* 세로선의 두께 */
-        height: 100px;     /* 세로선의 길이 */
-        background-color: black;  /* 선의 색상 */
+        width: 1px; /* 세로선의 두께 */
+        height: 100px; /* 세로선의 길이 */
+        background-color: black; /* 선의 색상 */
         border: none;
         block-size: 0.75rem;
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .headerIntroduce {
+        display: flex;
+        margin-left: 1rem;
+        padding-top: 1.5rem;
+    }
+
+    .headerIntroduceElement {
+        font-size: 1.125rem;
+        margin-left: 1rem;
+    }
+
+    .headerMyInfoMark {
+        display: flex;
+        justify-content: center;
+    }
+    .headerMyInfoMarkElement {
+        margin: 0 0.5rem;
     }
 }
