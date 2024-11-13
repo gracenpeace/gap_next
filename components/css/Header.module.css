@@ -27,7 +27,7 @@
 
     .headerNav {
         align-items: flex-end;
-        padding: 0.3125rem 0.13475rem 0.5625rem 0px;
+        padding: 0.3125rem 0.13475rem 0 0;
     }
 
     .navRootBox {
@@ -75,12 +75,13 @@
     .headerIntroduce {
         display: flex;
         margin-left: 1rem;
-        padding-top: 1.5rem;
+        padding-top: 1.3rem;
     }
 
     .headerIntroduceElement {
         font-size: 1.125rem;
         margin-left: 1rem;
+        padding : 0.2rem 0.5rem;
     }
 
     .headerMyInfoMark {

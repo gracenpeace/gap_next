@@ -1,9 +1,18 @@
+"use client";
+
 import Link from "next/link";
 import styles from "@/components/css/Header.module.css"
 import Image from "next/image";
+import {useEffect, useState} from "react";
 
+function Header() {
+    const [activeElement, setActiveElement] = useState(null);
 
-const Header = () => (
+    const handleActiveEnter = (element) => {
+        setActiveElement(element);
+    }
+
+    return (
     <header>
         <hgroup className={styles.headerGroup}>
             <div className={styles.headerContainer}>
@@ -15,37 +24,37 @@ const Header = () => (
                                 className={styles.headerImage}/>
                         </Link>
                         <div className={styles.headerIntroduce}>
-                            <div className={styles.headerIntroduceElement}>
+                            <div className={styles.headerIntroduceElement}
+                                 onMouseEnter={() => handleActiveEnter("intro")}
+                            >
                                 <Link href="/introduce" className="pretendard-semibold">
-                                    교회소개
+                                    교회
                                 </Link>
                             </div>
-                            <div className={styles.headerIntroduceElement}>
-                                <Link href="/theology" className="pretendard-semibold">
-                                    정통신학
+                            <div className={styles.headerIntroduceElement}
+                                 onMouseEnter={() => handleActiveEnter(null)}
+                            >
+                                <Link href="/worship" className="pretendard-semibold">
+                                    예배
                                 </Link>
                             </div>
-                            <div className={styles.headerIntroduceElement}>
-                                <Link href="/life" className="pretendard-semibold">
-                                    신앙의삶
-                                </Link>
-                            </div>
-                            <div className={styles.headerIntroduceElement}>
-                                <Link href="/confession" className="pretendard-semibold">
-                                    신앙고백
-                                </Link>
-                            </div>
-                            <div className={styles.headerIntroduceElement}>
+                            <div className={styles.headerIntroduceElement}
+                                 onMouseEnter={() => handleActiveEnter(null)}
+                            >
                                 <Link href="/heresy" className="pretendard-semibold">
                                     이단
                                 </Link>
                             </div>
-                            <div className={styles.headerIntroduceElement}>
+                            <div className={styles.headerIntroduceElement}
+                                 onMouseEnter={() => handleActiveEnter(null)}
+                            >
                                 <Link href="/feed" className="pretendard-semibold">
                                     양육
                                 </Link>
                             </div>
-                            <div className={styles.headerIntroduceElement}>
+                            <div className={styles.headerIntroduceElement}
+                                 onMouseEnter={() => handleActiveEnter(null)}
+                            >
                                 <Link href="/consulting" className="pretendard-semibold">
                                     상담
                                 </Link>
@@ -101,12 +110,10 @@ const Header = () => (
                         </div>
                     </div>
                 </nav>
-                <div>
-                    dd
-                </div>
             </div>
         </hgroup>
     </header>
-);
+    );
+}
 
 export default Header;
