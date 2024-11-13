@@ -19,7 +19,7 @@
 @media (min-width: 1024px) {
     .headerContainer {
         max-width: 1280px;
-        height: 144px;
+        height: 120px;
         padding-left: 2rem;
         padding-right: 2rem;
         margin: 0 auto;
@@ -75,13 +75,21 @@
     .headerIntroduce {
         display: flex;
         margin-left: 1rem;
-        padding-top: 1.3rem;
+        padding-top: 1rem;
+    }
+
+    .headerIntroduceElementFirst {
+        font-size: 1.4rem;
+        margin-left: 2rem;
+        padding : 0.2rem 0.5rem;
+        list-style: none;
     }
 
     .headerIntroduceElement {
-        font-size: 1.125rem;
-        margin-left: 1rem;
+        font-size: 1.4rem;
+        margin-left: 4rem;
         padding : 0.2rem 0.5rem;
+        list-style: none;
     }
 
     .headerMyInfoMark {
@@ -90,5 +98,50 @@
     }
     .headerMyInfoMarkElement {
         margin: 0 0.5rem;
+    }
+
+    .headerMenu {
+        display: flex;
+        width: 100%;
+        padding: 1rem 3rem 1rem 3rem;
+        position: absolute;
+        z-index: 10;
+        background-color: white;
+    }
+
+    .headerMenuListBoxFirst {
+        list-style: none;
+        margin-left: 11.5rem;
+        text-align: center;
+        line-height: 2.4;
+        font-size: 1rem;
+        color: gray;
+    }
+
+    .headerMenuListBoxSecond {
+        list-style: none;
+        margin-left: 2.4rem;
+        text-align: center;
+        line-height: 2.4;
+        font-size: 1rem;
+        color: gray;
+    }
+
+    .headerMenuListBoxfifth {
+        list-style: none;
+        margin-left: 17.5rem;
+        text-align: center;
+        line-height: 2.4;
+        font-size: 1rem;
+        color: gray;
+    }
+
+    .headerMenuListLast {
+        list-style: none;
+        margin-left: 4.5rem;
+        text-align: center;
+        line-height: 2.4;
+        font-size: 1rem;
+        color: gray;
     }
 }

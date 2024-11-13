@@ -24,39 +24,34 @@ function Header() {
                                 className={styles.headerImage}/>
                         </Link>
                         <div className={styles.headerIntroduce}>
-                            <div className={styles.headerIntroduceElement}
-                                 onMouseEnter={() => handleActiveEnter("intro")}
-                            >
+                            <div className={styles.headerIntroduceElementFirst}>
                                 <Link href="/introduce" className="pretendard-semibold">
                                     교회
                                 </Link>
                             </div>
-                            <div className={styles.headerIntroduceElement}
-                                 onMouseEnter={() => handleActiveEnter(null)}
-                            >
+                            <div className={styles.headerIntroduceElement}>
                                 <Link href="/worship" className="pretendard-semibold">
                                     예배
                                 </Link>
                             </div>
-                            <div className={styles.headerIntroduceElement}
-                                 onMouseEnter={() => handleActiveEnter(null)}
-                            >
+                            <div className={styles.headerIntroduceElement}>
                                 <Link href="/heresy" className="pretendard-semibold">
                                     이단
                                 </Link>
                             </div>
-                            <div className={styles.headerIntroduceElement}
-                                 onMouseEnter={() => handleActiveEnter(null)}
-                            >
+                            <div className={styles.headerIntroduceElement}>
                                 <Link href="/feed" className="pretendard-semibold">
                                     양육
                                 </Link>
                             </div>
-                            <div className={styles.headerIntroduceElement}
-                                 onMouseEnter={() => handleActiveEnter(null)}
-                            >
+                            <div className={styles.headerIntroduceElement}>
                                 <Link href="/consulting" className="pretendard-semibold">
                                     상담
+                                </Link>
+                            </div>
+                            <div className={styles.headerIntroduceElement}>
+                                <Link href="/consulting" className="pretendard-semibold">
+                                    다음세대
                                 </Link>
                             </div>
                         </div>
@@ -110,6 +105,37 @@ function Header() {
                         </div>
                     </div>
                 </nav>
+                <div className={styles.headerMenu}>
+                    <div className={styles.headerMenuListBoxFirst}>
+                        <li>교회소개</li>
+                        <li>목사님소개</li>
+                        <li>정통신학</li>
+                        <li>신앙의삶</li>
+                        <li>신앙고백</li>
+                        <li>섬기는이</li>
+                        <li>비전</li>
+                        <li>연간행사</li>
+                        <li>오시는길</li>
+                    </div>
+                    <div className={styles.headerMenuListBoxSecond}>
+                        <li>예배안내</li>
+                        <li>주일오전예배</li>
+                        <li>주일오후예배</li>
+                        <li>수요저녁예배</li>
+                        <li>금요기도회</li>
+                        <li>청년예배</li>
+                        <li>학생부예배</li>
+                    </div>
+                    <div className={styles.headerMenuListBoxfifth}>
+                        <li>이단상담</li>
+                        <li>개인상담</li>
+                    </div>
+                    <div className={styles.headerMenuListLast}>
+                        <li>우리는청년</li>
+                        <li>라온학생부</li>
+                        <li>주일학교</li>
+                    </div>
+                </div>
             </div>
         </hgroup>
     </header>

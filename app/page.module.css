@@ -166,3 +166,18 @@ a.secondary {
     filter: invert();
   }
 }
+
+@media (min-width: 1024px) {
+  .mainContainer {
+    width: 100%;
+  }
+  .mainImgBox {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .mainImg {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+}
