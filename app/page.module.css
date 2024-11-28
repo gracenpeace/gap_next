@@ -170,6 +170,7 @@ a.secondary {
 @media (min-width: 1024px) {
   .mainContainer {
     width: 100%;
+    margin-top: 30px;
   }
   .mainImgBox {
     max-width: 1280px;
@@ -178,6 +179,10 @@ a.secondary {
   .mainImg {
     width: 100%;
     margin: 0 auto;
-    padding: 0 2rem;
+  }
+  .mainTextBox {
+    text-align: center;
+    background: #f9f9f9;
+    height: 25rem;
   }
 }

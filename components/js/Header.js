@@ -8,13 +8,17 @@ import {useEffect, useState} from "react";
 function Header() {
     const [activeElement, setActiveElement] = useState(null);
 
-    const handleActiveEnter = (element) => {
-        setActiveElement(element);
+    const handleActiveEnter = () => {
+        setActiveElement("dropDownTrue");
+    }
+
+    const handleActiveLeave = () => {
+        setActiveElement(null)
     }
 
     return (
     <header>
-        <hgroup className={styles.headerGroup}>
+        <hgroup className={styles.headerGroup} onMouseLeave={handleActiveLeave}>
             <div className={styles.headerContainer}>
                 <nav className={styles.headerNav}>
                     <div className={styles.navRootBox}>
@@ -23,7 +27,7 @@ function Header() {
                                 src="https://www.dropbox.com/scl/fi/wr9cabtnk4xg3dca2oif8/eplogoBlack.jpg?rlkey=71nyp6jdd9m88e52etsvifz8u&raw=1"
                                 className={styles.headerImage}/>
                         </Link>
-                        <div className={styles.headerIntroduce}>
+                        <div className={styles.headerIntroduce} onMouseEnter={handleActiveEnter} >
                             <div className={styles.headerIntroduceElementFirst}>
                                 <Link href="/introduce" className="pretendard-semibold">
                                     교회
@@ -105,37 +109,39 @@ function Header() {
                         </div>
                     </div>
                 </nav>
-                <div className={styles.headerMenu}>
-                    <div className={styles.headerMenuListBoxFirst}>
-                        <li>교회소개</li>
-                        <li>목사님소개</li>
-                        <li>정통신학</li>
-                        <li>신앙의삶</li>
-                        <li>신앙고백</li>
-                        <li>섬기는이</li>
-                        <li>비전</li>
-                        <li>연간행사</li>
-                        <li>오시는길</li>
+                {activeElement === "dropDownTrue" && (
+                    <div className={styles.headerMenu}>
+                        <div className={styles.headerMenuListBoxFirst}>
+                            <li>교회소개</li>
+                            <li>목사님소개</li>
+                            <li>정통신학</li>
+                            <li>신앙의삶</li>
+                            <li>신앙고백</li>
+                            <li>섬기는이</li>
+                            <li>비전</li>
+                            <li>연간행사</li>
+                            <li>오시는길</li>
+                        </div>
+                        <div className={styles.headerMenuListBoxSecond}>
+                            <li>예배안내</li>
+                            <li>주일오전예배</li>
+                            <li>주일오후예배</li>
+                            <li>수요저녁예배</li>
+                            <li>금요기도회</li>
+                            <li>청년예배</li>
+                            <li>학생부예배</li>
+                        </div>
+                        <div className={styles.headerMenuListBoxfifth}>
+                            <li>이단상담</li>
+                            <li>개인상담</li>
+                        </div>
+                        <div className={styles.headerMenuListLast}>
+                            <li>우리는청년</li>
+                            <li>라온학생부</li>
+                            <li>주일학교</li>
+                        </div>
                     </div>
-                    <div className={styles.headerMenuListBoxSecond}>
-                        <li>예배안내</li>
-                        <li>주일오전예배</li>
-                        <li>주일오후예배</li>
-                        <li>수요저녁예배</li>
-                        <li>금요기도회</li>
-                        <li>청년예배</li>
-                        <li>학생부예배</li>
-                    </div>
-                    <div className={styles.headerMenuListBoxfifth}>
-                        <li>이단상담</li>
-                        <li>개인상담</li>
-                    </div>
-                    <div className={styles.headerMenuListLast}>
-                        <li>우리는청년</li>
-                        <li>라온학생부</li>
-                        <li>주일학교</li>
-                    </div>
-                </div>
+                )}
             </div>
         </hgroup>
     </header>
